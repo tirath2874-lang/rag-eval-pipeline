@@ -5,33 +5,31 @@ on:
   pull_request:
 
 jobs:
-
   evaluate:
-
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
+      - name: Debug Repository
+        run: |
+          pwd
+          ls -la
+          find . -name "requirements.txt"
+
       - name: Setup Python
-
         uses: actions/setup-python@v5
-
         with:
           python-version: "3.11"
 
       - name: Install
-
         run: |
           pip install -r requirements.txt
 
       - name: Run RAGAS
-
         run: |
           python evaluation/ragas_eval.py
 
       - name: Run DeepEval
-
         run: |
-          python evaluation/deepeval_eval.py
+          python evaluation/deep_eval.py
