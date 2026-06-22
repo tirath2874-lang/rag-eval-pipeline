@@ -1,0 +1,14 @@
+[
+  {
+    "question":"What is FastAPI?",
+    "ground_truth":"FastAPI is a modern Python web framework."
+  },
+  {
+    "question":"What is ChromaDB?",
+    "ground_truth":"ChromaDB is a vector database."
+  },
+  {
+    "question":"What is Ollama?",
+    "ground_truth":"Ollama runs LLMs locally."
+  }
+]
